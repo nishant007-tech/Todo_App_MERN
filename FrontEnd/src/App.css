@@ -1,0 +1,181 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Itim', curscccive;
+   background-color: rgba(128, 128, 128, 0.178);
+   box-sizing: border-box;
+  }
+  
+  .container{
+   display: block;
+   margin: 30px auto;
+   width: 50%;
+   height: 80vh;
+   border-radius: 5px;
+   box-shadow: 0px 6px 18px 4px rgba(88, 87, 84, 0.418);
+   background-color: rgba(252, 160, 40, 0.699);
+  }
+  .container .todoContent{
+    height: 130px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .container .todoContent h1{
+    display: inline-block;
+    margin: 5px;
+    color: white;
+    text-shadow: 0 0 3px #050504;
+  }
+  .container .todoContent form{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
+  .container .todoContent form input{
+    width: 40%;
+  }
+
+  .container .todoContent form input, form #addBtn{
+    font-size: 21px;
+    border: none;
+    background: white;
+    outline: none;
+    padding: 5px;
+    font-family: 'Itim', cursive;
+    box-shadow: 0 0 3px rgb(235, 231, 231);
+
+  }
+  .container .todoContent #addBtn{
+    color: rgba(252, 160, 40, 0.699);
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 40px;
+  }
+  .container .todoContent #addBtn:hover{
+    background: #ff8147e0;
+    color: white;
+  }
+  #DeleleAllTodo{
+    background: #ff8147e0;
+    padding: 7px;
+    color: white;
+    border: none;
+    margin-left: 30px;
+    border-radius: 2px;
+    font-size: large;
+    letter-spacing: 1px;
+    font-family: 'Itim', cursive;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgb(235, 231, 231);
+  }
+  #DeleleAllTodo:hover{
+      opacity: 0.8;
+      box-shadow: 0 0 3px chocolate;
+  }
+
+  .myTodo{
+    overflow-y: auto;
+    height: 350px;
+}
+ul{
+    margin-left: 70px;
+    margin-right: 67px;
+    padding: 0;
+}
+ul li{
+  display: flex;
+  justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    margin-bottom: 8px;
+}
+  ul li:hover {
+    background: #ff8147e0;
+  }
+  .data{
+    display: block;
+    width: 100%;
+  }
+.editContent{
+  width: 100%;
+}
+.close{
+    font-family: 'Courier New', Courier, monospace;
+    display: table;
+    font-size: large;
+    padding:2px 6px;
+    margin-right: 4px;
+    border-radius: 45%;
+    background-color:#ff8147e0 ;
+}
+.close:hover{
+    background-color:black;
+    color: white;
+}
+
+li .checked{
+    text-decoration: line-through;
+    text-decoration-style:double ;
+    /* background: #ff8147e0; */
+    color: black;
+    padding-left:38px;
+}
+li .checked::before{
+    content: '';
+    position: absolute;
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 3px 3px 0px;
+    transform: rotate(45deg);
+    top: 10px;
+    left: 10px;
+    height: 15px;
+    width: 7px;
+    padding: 2px;
+}
+
+@media screen and (max-width:900px){
+    .container {
+        width:92%;
+        height: 100vh;
+    }
+    .container .todoContent form{
+        display: inline-flex;
+        margin-left: 9px;
+        margin-right: 16px
+    }
+    .container .todoContent h1{
+        display: block;
+        margin-top: 5px;
+        padding: 0;
+        text-shadow: 0 0 3px #050504;
+    }
+    .select{
+        margin-left: 9px;
+        font-weight: bold;
+    }
+    select{
+        -webkit-appearance: none !important;
+        appearance: none;
+    }
+    .container .todoContent form input{
+        width: 41%;
+    }
+    ul{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    ul li{
+        padding-right: 26px;
+    }
+    .myTodo{
+        height: 660px;
+    }
+}
